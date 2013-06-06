@@ -33,7 +33,7 @@
 
 // Set width to auto for default container
 // We then reset it for fixed navbars in the #gridSystem mixin
-.navbar .container {
+.navbar .bootstrap-container {
   width: auto;
 }
 
@@ -193,9 +193,9 @@
 
 // Reset container width
 // Required here as we reset the width earlier on and the grid mixins don't override early enough
-.navbar-static-top .container,
-.navbar-fixed-top .container,
-.navbar-fixed-bottom .container {
+.navbar-static-top .bootstrap-container,
+.navbar-fixed-top .bootstrap-container,
+.navbar-fixed-bottom .bootstrap-container {
   @include grid-core-span($gridColumns, $gridColumnWidth, $gridGutterWidth);
 }
 
