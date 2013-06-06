@@ -12,6 +12,7 @@ mv responsive.scss _responsive.scss
 echo '@import "bootstrap";' > bootstrap.scss
 echo '@import "responsive";' > responsive.scss
 sed -i 's/@import "/@import "bootstrap\//g' _responsive.scss _bootstrap.scss
+sed -i 's/\.container\([ \n,]\)/.bootstrap-container\1/g' lib/_*
 git add _bootstrap.scss _responsive.scss bootstrap
 git commit -am "applied customizations for #{VERSION}"
 git push origin $BRANCH
